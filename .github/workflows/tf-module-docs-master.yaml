@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - main
+      - pull_request
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -9,12 +10,9 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
-    container:
-      image: public.ecr.aws/docker/library/ubuntu:latest
     steps:
       - uses: actions/checkout@v2
         with:
-          #ref: ${{ github.event.pull_request.head.ref }}
           ref: main
       - name: Render terraform docs inside the README.md and push changes back to main
         uses: terraform-docs/gh-actions@main
