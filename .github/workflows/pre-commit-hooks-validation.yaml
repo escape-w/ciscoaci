@@ -14,9 +14,6 @@ jobs:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
 
-    container:
-      image: public.ecr.aws/docker/library/python:3.13.0a4-slim-bullseye
-
     steps:
 
       - name: Checkout
