@@ -15,7 +15,7 @@ jobs:
       contents: read # This is required for actions/checkout
 
     container:
-      image: public.ecr.aws/docker/library/python:3.13.0a4-slim-bullseye
+      image: public.ecr.aws/ubuntu/ubuntu:latest
 
     steps:
 
