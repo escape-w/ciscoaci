@@ -9,6 +9,8 @@ permissions:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    container:
+      image: public.ecr.aws/docker/library/ubuntu:latest
     steps:
       - uses: actions/checkout@v2
         with:
