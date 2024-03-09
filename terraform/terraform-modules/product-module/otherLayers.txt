@@ -1,0 +1,39 @@
+Tenant_Config{
+    Tenant
+    VRF
+    Application Profile
+    bridgeDomains
+    Subnets
+    EPGS
+}
+
+Access_Policies{
+    Domain (DC - Minimal change) ----------->physical-domain
+    AAEP (DC - Minimal change)---------------->aaep
+    VLAN Pool (DC - Minimal change)------------->vlan-pool
+    Leaf Switch Profiles (DC - Minimal change)-------> leaf-Profile
+    Leaf Selectors (DC - Minimal change)   ???? leaf-Profile
+}
+
+Contracts{
+    Contracts(standard)
+    Contracts->subjects and its filters
+    static-paths
+    epg-to-domain
+    epg-to-contract
+}
+
+System_policies{
+    
+    VPC Security Policy (Global - Minimal change) ---------> vpc-security
+    Time (Global - Minimal change)---------------> resorce aci_rest managed, no module
+    TACACS (Global - Minimal change)---------> yet to implement
+    SNMP (Global - Minimal change)-----------> yet to implement
+}
+
+DHCP ????
+Create one variable for bd-epg-subnet Having 1 to 1 mapping.
+--unique key will be name.
+
+
+##layer multiple cdp and others

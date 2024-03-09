@@ -1,0 +1,54 @@
+1. Please break product module into sub-module --> right now 21 modules in one main.tf
+
+tenant --> resource group
+    vrf(virtual private network for tenant)
+    application_profiles()
+    epg (main service / endpoint )
+
+annotation is tag : https://registry.terraform.io/providers/CiscoDevNet/aci/latest/docs/resources/tenant
+https://www.cisco.com/c/en/us/td/docs/dcn/aci/apic/5x/system-management-configuration/cisco-apic-system-management-configuration-guide-52x/alias-annotations-and-tags-52x.html
+
+multiple annotations : maps
+
+tenant
+application_profiles
+
+checkov, gitlab pipeline
+
+validate, plan, deploy
+
+https://www.hashicorp.com/resources/automating-chaos-engineering-gamedays-with-terraform
+https://www.hashicorp.com/resources/advanced-terraform-techniques
+https://github.com/JohnCMcDonough/resume?tab=readme-ov-file
+
+for_each : data can also be
+------------------------
+https://github.com/netascode/terraform-aci-nac-aci/blob/main/aci_tenants.tf
+
+1. it will not fial inplan if tenant not exits
+2. no linking with actual variables
+
+layer 3, anp_epg values and epg-subnet??
+
+1. include tenant module in layer_1 --> layer_2  DONE
+2. aci_application_epg              -->          DONE (1 hour wasted for _BD prefix thing)
+3. subnet                           -->          DONE
+
+#subnet condition for parent linking with bd or anp_epg
+#checkov
+tflint        ##add it in IDE and run in pipeline as well
+tfdocs  DONE ##terraform-docs.exe markdown table . > Readme.md
+#pre-commit things
+
+
+1. enviroment and importing layers in product.
+we need different folder as same folder then same backend(state file)
+and so dynamically backedn configuration --> terragrunt --> xxxx as statefile is gitlab (terragrunt doesn'tsupport gitlab)
+2. pipeline using containerization
+pre-commit run 
+
+
+terraform workspace new test_workspace
+terraform plan
+terraform apply -auto-approve
+terraform workspace list

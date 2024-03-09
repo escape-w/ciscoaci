@@ -1,0 +1,43 @@
+physical_domains:
+  pd_1 : 
+    name : "RUL_PhysDOM_1"
+    vlan-pool : "" 
+  pd_2 :
+    name : "RUL_PhysDOM_2"
+    vlan-pool : "" 
+aaaeps:
+  aaaep_1:
+    name: "Physical_AAEP_1"
+    description: ""
+    physical_domain_names: "RUL_PhysDOM_1, RUL_PhysDOM_2"
+  aaaep_2:
+    name: "Physical_AAEP_2"
+    description: ""
+    #physical_domain_names: "" 
+vlan_pools:
+  vlan_pool_1:
+    name : RUL_VLPool
+    description : ""
+    alloc_mode : "static"
+    ranges : 
+      - {from : "vlan-1", to: "vlan-11", alloc_mode_ranges: "inherit", ranges_role: "external", name_alias: "value1", description: "" }
+
+leaf_Profiles:
+  leaf_profile_1 :
+    name : leaf1
+    description : ""
+    name_alias : leaf1
+    leaf_selector :
+      - {
+          name: "one",
+          switch_association_type : "range",
+          node_block : [{
+            name          : "block1",
+            from_port_num : "101",
+            to_port_num   : "102"
+            }, {
+            name          : "block2",
+            from_port_num : "103",
+            to_port_num   : "104"
+        }]
+        }

@@ -1,0 +1,49 @@
+cdp:
+  cdp_1:
+    name        : "CDP_Enabled_IntfPol_1"
+    description : "form terraform"
+    admin_st    : "enabled"
+  cdp_2:
+    name        : "CDP_Enabled_IntfPol_2"
+    description : "form terraform"
+    admin_st    : "enabled"
+
+lldp:
+  lldp_1:
+    name        : "LLDP_Enabled_IntfPol_1"
+    admin_rx_st : "enabled"
+    admin_tx_st : "enabled"
+    description : "form terraform"
+  lldp_2:
+    name        : "LLDP_Enabled_IntfPol_2"
+    admin_rx_st : "enabled"
+    admin_tx_st : "enabled"
+    description : "form terraform"
+llp:
+  llp_1:
+    auto_neg    : "on"
+    description : "form terraform"
+    fec_mode    : "inherit"
+    name        : "Speed_Auto_IntfPol_1"
+    speed       : "inherit"
+  llp_2:
+    auto_neg    : "on"
+    description : "form terraform"
+    fec_mode    : "inherit"
+    name        : "Speed_Auto_IntfPol_2"
+    speed       : "inherit"
+lacp:
+  lacp_1:
+    ctrl        : ["susp-individual", "load-defer", "graceful-conv"]
+    description : "form terraform"
+    max_links   : "16"
+    min_links   : "1"
+    mode        : "active"
+    name        : "LACP_Active_IntfPol_1"
+  lacp_2:
+    ctrl        : ["susp-individual", "load-defer", "graceful-conv"]
+    description : "form terraform"
+    max_links   : "16"
+    min_links   : "1"
+    mode        : "active"
+    name        : "LACP_Active_IntfPol_2"
