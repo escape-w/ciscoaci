@@ -1,3 +1,5 @@
+
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -20,22 +22,20 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aci_lacp_policy.lacp](https://registry.terraform.io/providers/ciscodevnet/aci/2.11.1/docs/resources/lacp_policy) | resource |
+| [aci_attachable_access_entity_profile.aaep](https://registry.terraform.io/providers/ciscodevnet/aci/2.11.1/docs/resources/attachable_access_entity_profile) | resource |
+| [aci_physical_domain.domains](https://registry.terraform.io/providers/ciscodevnet/aci/2.11.1/docs/data-sources/physical_domain) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ctrl"></a> [ctrl](#input\_ctrl) | n/a | `list(string)` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | n/a | yes |
-| <a name="input_max_links"></a> [max\_links](#input\_max\_links) | n/a | `string` | n/a | yes |
-| <a name="input_min_links"></a> [min\_links](#input\_min\_links) | n/a | `string` | n/a | yes |
-| <a name="input_mode"></a> [mode](#input\_mode) | n/a | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
+| <a name="input_physical_domain_names"></a> [physical\_domain\_names](#input\_physical\_domain\_names) | List of physical domain names | `list(string)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_lacp_id"></a> [lacp\_id](#output\_lacp\_id) | n/a |
+| <a name="output_aeep_id"></a> [aeep\_id](#output\_aeep\_id) | n/a |
 <!-- END_TF_DOCS -->
