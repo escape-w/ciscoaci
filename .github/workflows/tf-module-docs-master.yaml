@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          #ref: ${{ github.event.pull_request.head.ref }}
+          ref: main
       - name: Render terraform docs inside the README.md and push changes back to main
         uses: terraform-docs/gh-actions@main
         with:
