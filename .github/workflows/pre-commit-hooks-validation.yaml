@@ -1,0 +1,52 @@
+name: Pre-commit
+
+on:
+ pull_request:
+ release:
+   types: [created]
+
+jobs:
+  pre-commit:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
+
+    container:
+      image: public.ecr.aws/docker/library/python:3.13.0a4-slim-bullseye
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+            fetch-depth: 0
+
+      - name: Enable GIT
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+           terraform_version: 1.2.3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: Set up Gitlint
+        run: pip install gitlint
+
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v3
+        with:
+          tflint_version: v0.44.1
+
+      - name: Init TFLint
+        run: tflint --init
+
+      - uses: pre-commit/action@v3.0.0
+        with:
+            extra_args: --files all
