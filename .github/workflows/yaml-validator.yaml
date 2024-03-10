@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+      - pull_request
+
+permissions:
+  #id-token: write # This is required for requesting the JWT
+  contents: read 
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validation
+        id: validation
+        uses: nrkno/yaml-schema-validator-github-action@v5
+        with:
+          schema: schemas/layer_2_schema.yaml
+          target: terraform/environment/prod/Layer_2/variables.yaml
+      - name: Print results
+        run: echo "${{ steps.validation.outputs.result }}"
