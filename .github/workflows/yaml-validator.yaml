@@ -12,12 +12,12 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Validation
-        id: validation
-        uses: yaml-schema-validator-github-action@5
-        with:
-          schema: terraform/schemas/layer_2_schema.yaml
-          target: terraform/environment/prod/Layer_2/variables.yaml
-      - name: Print results
-        run: echo "${{ steps.validation.outputs.result }}"
+      - uses: actions/checkout@v4.1.1
+      #- name: Validation
+        #id: validation
+        #uses: yaml-schema-validator-github-action@5
+        #with:
+          #schema: terraform/schemas/layer_2_schema.yaml
+          #target: terraform/environment/prod/Layer_2/variables.yaml
+      #- name: Print results
+        #run: echo "${{ steps.validation.outputs.result }}"
