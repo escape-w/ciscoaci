@@ -1,0 +1,97 @@
+# values for layer_2
+
+type: object
+properties:
+  physical_domains:
+    type: object
+    patternProperties:
+      ^.*$:  
+        type: object
+        properties:
+          name:
+            type: string
+          vlan-pool:
+            type: string
+  aaaeps:
+    type: object
+    patternProperties:
+      ^.*$:  
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          physical_domain_names:
+            type: string
+  vlan_pools:
+    type: object
+    patternProperties:
+      ^.*$:  
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          alloc_mode:
+            type: string
+            enum: ["dynamic", "static"]
+          ranges:
+            type: array
+            items:
+              type: object
+              properties:
+                from:
+                  type: string
+                to:
+                  type: string
+                alloc_mode_ranges:
+                  type: string
+                  enum: ["dynamic", "static", "inherit"]
+                ranges_role:
+                  type: string
+                  enum: ["external", "internal"]
+                name_alias:
+                  type: string
+                description:
+                  type: string
+  leaf_Profiles:
+    type: object
+    patternProperties:
+      ^.*$:  
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          name_alias:
+            type: string
+          leaf_selector:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                switch_association_type:
+                  type: string
+                  enum: ["ALL", "range", "ALL_IN_POD"]
+                node_block:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      from_port_num:
+                        type: integer
+                        minimum: 1
+                        maximum: 16000
+                        default: 1
+                      to_port_num:
+                        type: integer
+                        minimum: 1
+                        maximum: 16000
+                        default: 1
