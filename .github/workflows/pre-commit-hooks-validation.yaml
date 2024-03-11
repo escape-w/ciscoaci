@@ -9,6 +9,8 @@ jobs:
   pre-commit:
 
     runs-on: ubuntu-latest
+    container:
+      image: public.ecr.aws/docker/library/ubuntu:latest
 
     permissions:
       id-token: write # This is required for requesting the JWT
