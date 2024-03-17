@@ -1,4 +1,4 @@
-output "Layer_3" {
+output "Layer_2" {
   value = { for key, value in module.layer_3 : key => value }
 }
 

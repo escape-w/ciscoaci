@@ -31,3 +31,5 @@
 **/*.tfvars.json
 
 **/*_backup
+
+**/*.exe

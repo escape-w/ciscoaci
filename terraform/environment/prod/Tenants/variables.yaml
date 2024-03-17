@@ -1,0 +1,33 @@
+RUL_Tenant_1202:
+   description: "Tenant for DataC"
+   application_profiles:
+      - "AP_RUL_1"                                          
+      - "AP_L2_Extended_1"
+   vrfs:
+      - "RUL_VRF"
+                  
+   bd_epg_subnet_set:
+      ProSplicer:
+         name: "ProSplicer"
+         description: "Resource handles ProSplicer"
+         bd_unicast_route: "no"
+         bd_arp_flood: "no"
+         bd_ip_learning: "yes"
+         bd_limit_ip_learn_to_subnets: "yes"
+         bd_mac: "00:22:BD:F8:19:FF"
+         bd_mcast_allow: "yes"
+         bd_multi_dst_pkt_act: "bd-flood"
+         bd_bridge_domain_type: "regular"
+         target_vrf: "RUL_VRF"
+         
+         target_application_profile: "AP_RUL_1"
+         epg_pc_enf_pref: "enforced"
+         epg_pref_gr_memb: "exclude"
+         epg_shutdown: "no"
+         
+         subnet_ip       : "10.0.1.252/24"
+         subnet_description: "description value"
+         subnet_scope      : ["private"]
+         subnet_ctrl       : ["no-default-gateway"]
+         subnet_preferred  : "no"
+         subnet_virtual    : "yes"

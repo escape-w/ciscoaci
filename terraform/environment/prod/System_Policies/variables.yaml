@@ -47,3 +47,18 @@ lacp:
     min_links   : "1"
     mode        : "active"
     name        : "LACP_Active_IntfPol_2"
+
+vpc_security:
+  vpc1:
+    name: "L902_902_VPC_ProtGRP"
+    switch1: "901"                        
+    switch2 : "902"                        
+    vpc_domain_policy: "default"                
+    vpc_explicit_protection_group_id: "901"
+
+sys_time:
+  time:
+    display_format: "local"
+    show_offset: "enabled"
+    timezone: "n420_America-Phoenix"
+    userdom: "all"
