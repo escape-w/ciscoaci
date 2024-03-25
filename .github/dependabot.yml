@@ -5,7 +5,12 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" 
-    directory: "/" 
+  - package-ecosystem: "terraform" # See documentation for possible values
+    directory: "/" # customer-managed-keys module 
+    commit-message:
+      prefix: "chore(deps):"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    labels:
+      - "terraform"
+      - "dependencies"  
