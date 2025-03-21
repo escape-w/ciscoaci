@@ -11,7 +11,8 @@ updates:
     commit-message:
       prefix: "feat(deps):"
     schedule:
-      interval: "daily"
+      interval: "montly"
+      day: "sunday"
     labels:
       - "terraform"
       - "dependabot"
@@ -19,10 +20,11 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "montly"
+      day: "sunday"
     commit-message:
       prefix: "feat(deps):"
     labels:
       - "github-actions"
-      - "dependencies"
+      - "dependabot"
       - "dependabot"
