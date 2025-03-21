@@ -6,11 +6,13 @@
 version: 2
 updates:
   - package-ecosystem: "terraform" # See documentation for possible values
-    directory: "/" # customer-managed-keys module 
+    directory: "terraform/terraform-modules/aci/aaep/" # customer-managed-keys module 
     commit-message:
-      prefix: "chore(deps):"
+      prefix: "feat(deps):"
     schedule:
       interval: "daily"
     labels:
       - "terraform"
-      - "dependencies"  
+      - "dependencies"
+      - "dependabot"
+
