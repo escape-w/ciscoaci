@@ -7,7 +7,7 @@ version: 2
 updates:
   - package-ecosystem: "terraform" # See documentation for possible values
     #directory: "terraform/terraform-modules/aci/aaep/" # customer-managed-keys module 
-    directory: "/"
+    directory: "terraform/terraform-modules/aci/epg-to-domain"
     commit-message:
       prefix: "feat(deps):"
     schedule:
