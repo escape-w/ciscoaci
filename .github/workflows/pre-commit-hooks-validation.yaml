@@ -50,6 +50,6 @@ jobs:
       - name: Init TFLint
         run: tflint --init
 
-      - uses: pre-commit/action@v3.0.0
+      - uses: pre-commit/action@v3.0.1
         with:
             extra_args: --files all
