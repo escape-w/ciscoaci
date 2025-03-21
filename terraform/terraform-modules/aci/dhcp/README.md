@@ -35,7 +35,7 @@ No modules.
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 | <a name="input_name_alias"></a> [name\_alias](#input\_name\_alias) | n/a | `string` | n/a | yes |
 | <a name="input_owner"></a> [owner](#input\_owner) | n/a | `string` | n/a | yes |
-| <a name="input_relation_dhcp_rs_prov"></a> [relation\_dhcp\_rs\_prov](#input\_relation\_dhcp\_rs\_prov) | n/a | <pre>list(object({<br>    addr                       = string<br>    target_application_profile = string<br>    target_epg                 = string<br>  }))</pre> | n/a | yes |
+| <a name="input_relation_dhcp_rs_prov"></a> [relation\_dhcp\_rs\_prov](#input\_relation\_dhcp\_rs\_prov) | n/a | <pre>list(object({<br/>    addr                       = string<br/>    target_application_profile = string<br/>    target_epg                 = string<br/>  }))</pre> | n/a | yes |
 | <a name="input_target_tenant"></a> [target\_tenant](#input\_target\_tenant) | n/a | `string` | n/a | yes |
 
 ## Outputs

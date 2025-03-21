@@ -26,7 +26,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_vpc_pg"></a> [vpc\_pg](#input\_vpc\_pg) | n/a | <pre>object({<br>    name                             = string<br>    switch1                          = string<br>    switch2                          = string<br>    vpc_domain_policy                = string<br>    vpc_explicit_protection_group_id = string<br>  })</pre> | n/a | yes |
+| <a name="input_vpc_pg"></a> [vpc\_pg](#input\_vpc\_pg) | n/a | <pre>object({<br/>    name                             = string<br/>    switch1                          = string<br/>    switch2                          = string<br/>    vpc_domain_policy                = string<br/>    vpc_explicit_protection_group_id = string<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 

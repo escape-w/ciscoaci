@@ -26,7 +26,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_snmp"></a> [snmp](#input\_snmp) | n/a | <pre>object({<br>    snmp_policy_dn     = string<br>    name               = string<br>    authorization_key  = string<br>    authorization_type = string<br>    privacy_key        = string<br>    privacy_type       = string<br>  })</pre> | n/a | yes |
+| <a name="input_snmp"></a> [snmp](#input\_snmp) | n/a | <pre>object({<br/>    snmp_policy_dn     = string<br/>    name               = string<br/>    authorization_key  = string<br/>    authorization_type = string<br/>    privacy_key        = string<br/>    privacy_type       = string<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 

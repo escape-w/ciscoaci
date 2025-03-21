@@ -26,7 +26,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_leaf_profile"></a> [leaf\_profile](#input\_leaf\_profile) | Leaf profile configuration | <pre>object({<br>    name        = string<br>    description = string<br>    name_alias  = string<br>    leaf_selector = list(object({<br>      name                    = string<br>      switch_association_type = string<br>      node_block = list(object({<br>        name          = string<br>        from_port_num = string<br>        to_port_num   = string<br>      }))<br>    }))<br>  })</pre> | n/a | yes |
+| <a name="input_leaf_profile"></a> [leaf\_profile](#input\_leaf\_profile) | Leaf profile configuration | <pre>object({<br/>    name        = string<br/>    description = string<br/>    name_alias  = string<br/>    leaf_selector = list(object({<br/>      name                    = string<br/>      switch_association_type = string<br/>      node_block = list(object({<br/>        name          = string<br/>        from_port_num = string<br/>        to_port_num   = string<br/>      }))<br/>    }))<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 

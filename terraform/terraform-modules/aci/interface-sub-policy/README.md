@@ -29,10 +29,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cdp"></a> [cdp](#input\_cdp) | n/a | <pre>object({<br>    name        = string<br>    admin_st    = string<br>    description = string<br>  })</pre> | n/a | yes |
-| <a name="input_lacp"></a> [lacp](#input\_lacp) | n/a | <pre>object({<br>    name        = string<br>    description = string<br>    ctrl        = list(string)<br>    max_links   = string<br>    min_links   = string<br>    mode        = string<br>  })</pre> | n/a | yes |
-| <a name="input_lldp"></a> [lldp](#input\_lldp) | n/a | <pre>object({<br>    name        = string<br>    description = string<br>    admin_rx_st = string<br>    admin_tx_st = string<br>  })</pre> | n/a | yes |
-| <a name="input_llp"></a> [llp](#input\_llp) | n/a | <pre>object({<br>    name        = string<br>    description = string<br>    auto_neg    = string<br>    fec_mode    = string<br>    speed       = string<br>  })</pre> | n/a | yes |
+| <a name="input_cdp"></a> [cdp](#input\_cdp) | n/a | <pre>object({<br/>    name        = string<br/>    admin_st    = string<br/>    description = string<br/>  })</pre> | n/a | yes |
+| <a name="input_lacp"></a> [lacp](#input\_lacp) | n/a | <pre>object({<br/>    name        = string<br/>    description = string<br/>    ctrl        = list(string)<br/>    max_links   = string<br/>    min_links   = string<br/>    mode        = string<br/>  })</pre> | n/a | yes |
+| <a name="input_lldp"></a> [lldp](#input\_lldp) | n/a | <pre>object({<br/>    name        = string<br/>    description = string<br/>    admin_rx_st = string<br/>    admin_tx_st = string<br/>  })</pre> | n/a | yes |
+| <a name="input_llp"></a> [llp](#input\_llp) | n/a | <pre>object({<br/>    name        = string<br/>    description = string<br/>    auto_neg    = string<br/>    fec_mode    = string<br/>    speed       = string<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 

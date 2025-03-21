@@ -29,7 +29,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_static_config"></a> [static\_config](#input\_static\_config) | n/a | <pre>list(object({<br>    interface_dn         = string<br>    encap                = string<br>    description          = string<br>    deployment_immediacy = string<br>    mode                 = string<br>    primary_encap        = string<br>  }))</pre> | n/a | yes |
+| <a name="input_static_config"></a> [static\_config](#input\_static\_config) | n/a | <pre>list(object({<br/>    interface_dn         = string<br/>    encap                = string<br/>    description          = string<br/>    deployment_immediacy = string<br/>    mode                 = string<br/>    primary_encap        = string<br/>  }))</pre> | n/a | yes |
 | <a name="input_target_application_profile"></a> [target\_application\_profile](#input\_target\_application\_profile) | n/a | `string` | n/a | yes |
 | <a name="input_target_epg"></a> [target\_epg](#input\_target\_epg) | n/a | `string` | n/a | yes |
 | <a name="input_target_tenant"></a> [target\_tenant](#input\_target\_tenant) | n/a | `string` | n/a | yes |

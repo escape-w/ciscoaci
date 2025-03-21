@@ -30,7 +30,7 @@ No modules.
 | <a name="input_alloc_mode"></a> [alloc\_mode](#input\_alloc\_mode) | Alloc\_mode VLanPool | `any` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description of VLanPool | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of VLanPool | `string` | n/a | yes |
-| <a name="input_ranges"></a> [ranges](#input\_ranges) | vlpol ranges | <pre>list(object({<br>    name_alias        = string<br>    description       = string<br>    from              = string<br>    to                = string<br>    alloc_mode_ranges = string<br>    ranges_role       = string<br>  }))</pre> | n/a | yes |
+| <a name="input_ranges"></a> [ranges](#input\_ranges) | vlpol ranges | <pre>list(object({<br/>    name_alias        = string<br/>    description       = string<br/>    from              = string<br/>    to                = string<br/>    alloc_mode_ranges = string<br/>    ranges_role       = string<br/>  }))</pre> | n/a | yes |
 
 ## Outputs
 

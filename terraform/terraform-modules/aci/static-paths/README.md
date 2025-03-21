@@ -27,7 +27,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_application_epg_dn"></a> [application\_epg\_dn](#input\_application\_epg\_dn) | n/a | `string` | n/a | yes |
-| <a name="input_static_config"></a> [static\_config](#input\_static\_config) | n/a | <pre>list(object({<br>    interface_dn         = string<br>    encap                = string<br>    description          = string<br>    deployment_immediacy = string<br>    mode                 = string<br>    primary_encap        = string<br>  }))</pre> | n/a | yes |
+| <a name="input_static_config"></a> [static\_config](#input\_static\_config) | n/a | <pre>list(object({<br/>    interface_dn         = string<br/>    encap                = string<br/>    description          = string<br/>    deployment_immediacy = string<br/>    mode                 = string<br/>    primary_encap        = string<br/>  }))</pre> | n/a | yes |
 
 ## Outputs
 
