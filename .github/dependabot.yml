@@ -14,7 +14,6 @@ updates:
       interval: "daily"
     labels:
       - "terraform"
-      - "dependencies"
       - "dependabot"
 
   - package-ecosystem: "github-actions"
